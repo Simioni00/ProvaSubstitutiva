@@ -1,0 +1,22 @@
+<div>
+  <div>
+    <label for="peso">Peso:</label>
+    <input type="number" id="peso" [(ngModel)]="peso" />
+  </div>
+  <div>
+    <label for="altura">Altura:</label>
+    <input type="number" id="altura" [(ngModel)]="altura" />
+  </div>
+  <div>
+    <label for="aluno">Alunos:</label>
+    <select id="aluno" [(ngModel)]="alunoID">
+      <option *ngFor="let a of alunos" value="{{ a.alunoID }}">
+        {{ a.nome }}
+      </option>
+    </select>
+  </div>
+  <div>
+    <button (click)="cadastrar()">Cadastrar IMC</button>
+  </div>
+</div>
+

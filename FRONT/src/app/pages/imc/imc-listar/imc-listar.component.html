@@ -1,0 +1,32 @@
+<div>
+  <h2>Lista de IMCs</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Nascimento</th>
+        <th>Altura</th>
+        <th>Peso</th>
+        <th>IMC</th>
+        <th>Classificação</th>
+        <th>Data de Criação</th>
+        <th>Atualizar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let imc of imcs">
+        <td>{{ imc.imcID }}</td>
+        <td>{{ imc.aluno?.nome }}</td>
+        <td>{{ imc.aluno?.nascimento }}</td>
+        <td>{{ imc.altura }}</td>
+        <td>{{ imc.peso }}</td>
+        <td>{{ imc.valorImc }}</td>
+        <td>{{ imc.classificar }}</td>
+        <td>{{ imc.dataCriacao | date }}</td>
+        <td><a routerLink="/pages/imc/imc-atualizar/{{imc.imcID}}">Atualizar</a></td>
+      </tr>
+    </tbody>
+  </table>
+

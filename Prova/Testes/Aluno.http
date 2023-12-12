@@ -1,0 +1,23 @@
+### Cadastrar Aluno
+POST https://localhost:7099/Aluno
+Content-Type: application/json
+
+{
+  "Nome": "Nova",
+  "Nascimento": "00/00/0000"
+}
+### Alterar Aluno
+PUT https://localhost:7099/Aluno/2
+Content-Type: application/json
+
+{
+  "AlunoID": 2,
+  "Nome": "Alterando",
+  "Nascimento": "11/11/1111"
+}
+
+### Deletar Aluno
+DELETE https://localhost:7099/Aluno/1
+
+### Listar Todos os Alunos
+GET https://localhost:7099/Aluno

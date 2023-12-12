@@ -1,0 +1,25 @@
+### Criação de um novo IMC
+POST https://localhost:7099/imc/2
+Content-Type: application/json
+
+{
+    "Altura": 1.8,
+    "Peso": 95
+}
+
+### Listagem de todos os IMCs
+GET https://localhost:7099/imc
+
+### Atualização de um IMC
+PUT https://localhost:7099/imc/2
+Content-Type: application/json
+
+{
+    "ImcID": 2,
+    "Altura": 1.81,
+    "Peso": 93,
+    "AlunoID": 2
+}
+
+### Deleção de um IMC
+DELETE https://localhost:7099/imc/2
